@@ -1,0 +1,33 @@
+git branch sub01
+vi test.txt
+:wq
+git add .
+git commit -m "not 1 but first"
+
+git checkout master 
+vi test.txt
+:wq
+git add .
+git commit -m "not 1 but first"
+git branch 
+* master
+  sub01
+
+git status
+vim test.txt
+
+<<..<< HEAD
+line 1st
+
+=========
+line first
+>>..>> sub01
+
+上記の内容を更新したい内容に編集する
+
+line first
+
+:wq
+
+git add .
+git commit -m "conflict fixed"
